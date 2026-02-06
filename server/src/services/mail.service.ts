@@ -3,7 +3,7 @@ import mailJet, { type Client } from "node-mailjet";
 class MailService {
   private readonly MJ_ACCESS = process.env.MJ_ACCESS as string;
   private readonly MJ_SECRET = process.env.MJ_SECRET as string;
-  private readonly MJ_FROM_EMAIL = "MJ_FROM_EMAIL" as string;
+  private readonly MJ_FROM_EMAIL = process.env.MJ_FROM_EMAIL as string;
 
   private client: Client;
 
